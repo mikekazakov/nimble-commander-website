@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Nimble Commander Updates</title>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+      <item>
+        <title>Nimble Commander 1.7.0</title>
+		<sparkle:minimumSystemVersion>10.15.0</sparkle:minimumSystemVersion>        
+        <description>
+          <![CDATA[
+What's new:<br>
+<ul>
+    <li>Updated for macOS Sequoia.</li>
+    <li>The integrated viewer now provides syntax highlighting using the Lexilla library.</li>
+    <li>The integrated viewer no longer uses toolbars; instead, a status bar is used to save space.</li>
+    <li>The user guide has been significantly expanded.</li>
+    <li>Updated the application icon.</li>
+    <li>Added an option for natural collation when sorting filenames.</li>
+    <li>Fixed a bug causing unstable ordering of tool icons on the toolbar.</li>
+    <li>The "Go To" popup now allows numeric keys to filter items.</li>
+    <li>Added a new hotkey: Ctrl+Return to display a context menu.</li>
+    <li>Fixed an issue with incomplete FTP transfers.</li>
+    <li>Fixed an issue where an overlapped terminal caused the mouse cursor to display the wrong type.</li>
+    <li>Fixed a broken Shift+Tilde shortcut.</li>
+    <li>Removed the built-in checksum calculation feature.</li>
+    <li>Cmd+B now adds the current directory of a panel instead of the path to the currently focused item.</li>
+    <li>Fixed an issue where excessive refresh requests during file operations caused incorrect behavior in file panels.</li>
+    <li>Numerous small UI polish improvements have been made.</li>
+</ul>
+]]>
+        </description>
+        <pubDate>Wed 18 Dec 2024 11:11:47 UTC</pubDate>
+        <enclosure url="https://magnumbytes.com/downloads/releases/nimble-commander-1.7.0(4198).dmg"
+        		sparkle:version="4198"
+				sparkle:shortVersionString="1.7.0"
+                sparkle:dsaSignature="MEQCIHoJFDPyLrgFMnP/i+GDsxlKXOXij3vYHYwYc7AW5Ix7AiA1wPFy0+j/EnKvslLXu+iXpFUImBW9vSPJh4xHRDkjTg=="
+                sparkle:edSignature="byaf1QnWDlI9AGB9wA3UAB93ZwcTU2qzEtadM151Kbmk/Ud45Ep1XX+oVhGHLtYhqOTAZkH0mlNCLpGUNuyfBw=="
+        		length="15505224"
+        		type="application/octet-stream"
+        		/>
+      </item>
+  </channel>
+</rss>
+
