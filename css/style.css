@@ -1,0 +1,476 @@
+body {
+font-size: 16px;
+line-height: 32px;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+letter-spacing: 1px;
+padding: 0;
+margin: 0;
+background-color: #ffffff;
+}
+
+body h1 {
+    font-size: 30px;
+}
+
+body h2 {
+    font-size: 26px;
+}
+
+body h3 {
+    font-size: 22px;
+}
+
+body h4 {
+    font-size: 18px;
+}
+
+/* Global */
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section_header {
+    display: flex;
+	flex-basis: 100%;
+	align-items: center;
+    color: #303040;
+    margin: 8px 0px;
+    font-weight: normal;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.section_header::before {
+    content: "";
+    flex-grow: 1;
+    background: #2a2a2a;
+    height: 2px;
+    margin-right: 24px;
+}
+.section_header::after {
+	content: "";
+	flex-grow: 1;
+	background: #2a2a2a;
+	height: 2px;
+    margin-left: 24px;
+}
+
+.hrefbutton_common {
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align:center;
+    line-height: 1em;
+    vertical-align:middle;
+    padding: 1.125em 2em;
+    transition: 0.2s;
+}
+
+/******************************************** Header *******************************************/
+header {
+    background: #ededed;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1500;
+    color: #616161;
+}
+
+header #branding{
+    float: left;
+} 
+
+header h1 {
+    font-weight: normal;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style-type: none;    
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline;
+    padding: 8px;
+}
+
+header div#branding a{
+    color:inherit;
+    text-decoration: none;
+    text-transform: none;
+}
+
+header  h1{
+    font-size: 26px;
+}
+
+header nav#header_links a{
+    color:inherit;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#header_fix_space {
+    height: 60px;
+}
+
+/******************************************** Footer *********************************************/
+
+footer p {
+    text-align: center;
+    color: #c6c6c6;
+    font-size: 15px;
+    margin: 2px 0px;
+}
+
+/**************************************** Main - Showcase ****************************************/
+#showcase {
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    margin-top: 90px;
+}
+
+#showcase_title {
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+#showcase_slogan {
+    font-weight: normal;
+    margin-bottom: 46px;
+}
+
+#showcase p {
+    font-size: 22px;
+
+}
+
+.showcase_images {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.showcase_image {
+    width: 100%;
+}
+
+.showcase_image_button {
+    position: absolute;
+    width: 24px;
+    height: 32px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    border-radius: 4px;
+    border: 1px solid #999999;
+    color: #000000;
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+.showcase_image_button:hover {
+    background-color: #e7e7e7;
+}
+
+.showcase_image_button:focus {
+    outline: none;
+}
+
+.showcase_image_button_left {
+    left: 0%;
+}
+
+.showcase_image_button_right {
+    right:0%;
+}
+
+.download_primary {
+    border: 1px solid #262626;
+    color: #ffffff;    
+    background-color: #2A2A2A;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.download_primary:hover{
+    border: 1px solid #1b1b1b;    
+    background-color: #1b1b1b;
+}
+
+/******************************************Product focus *****************************************/
+#product_focus{
+    background: #f7f7f7;
+    margin-top: 120px;
+    padding-bottom: 70px;
+}
+
+#product_focus hr {
+    border: none;
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+.focus {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 16px;
+}
+
+.focus_icon {
+    flex: 0 0 250px;
+    text-align:center;
+}
+
+.focus_icon i{
+    margin: auto;
+}
+
+.focus_icon h4 {
+    font-weight: 700;
+    margin: 0;
+} 
+
+/******************************************** Features *******************************************/
+#features{
+    background: #ffffff;
+    padding-bottom: 70px;
+}
+
+.features_row {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr); 
+    grid-template-rows: none;
+    column-gap: 30px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.feature i{
+    float: left;
+    margin-right: 10px;
+}
+
+.feature h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;    
+    margin: 0;
+}
+
+.feature p {
+    margin-block-start: 0;
+    margin-block-end: 0;    
+    margin: 0;
+    line-height: 150%;
+}
+
+#features hr {
+    border: none;
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+/****************************************** Versions comparison *****************************************/
+#versions_comparison{
+    background: #f7f7f7;
+    padding-bottom: 70px;
+}
+
+#versions_features_table {
+    margin: 0 auto;
+}
+
+#versions_features_table th {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#versions_features_table td:not(:first-child) {
+    text-align: center;
+}
+
+.download_versions {
+    border: 2px solid #262626;
+    color: #000000;    
+    background-color: none;
+    font-size: 15px;
+    padding: 13px 19px;
+    margin: 0px 6px;
+    width: 105px;
+}
+
+.download_versions:hover{
+    background-color: #2a2a2a;
+    color: #ffffff;   
+}
+
+/****************************************** Get it now! *****************************************/
+#get_it_now{
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#get_it_now p {
+    margin-top: 30px;
+    line-height: 150%;
+}
+
+.download_gta_try {
+    border: 1px solid #262626;
+    color: #ffffff;    
+    background-color: #2A2A2A;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 13px 19px;
+    margin: 0px 10px;
+    width: 150px;
+}
+
+.download_gta_try:hover{
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+.download_gta_buy {
+    border: 1px solid #d4d4d4;
+    color: #000000;    
+    background-color: #ebebeb;
+    font-size: 15px;
+    padding: 13px 19px;
+    margin: 0px 10px;
+    width: 150px;
+}
+
+.download_gta_buy:hover{
+    background-color: #dcdcdc;
+}
+
+/******************************************** What's new *****************************************/
+#whats_new h3 {
+    padding: 0;
+    margin: 0;
+}
+
+#whats_new ul {
+    margin-top: 0.5em;
+    margin-bottom: 2.5em;
+}
+
+/******************************************** Download *******************************************/
+
+#direct_download {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.download_direct {
+    border: 1px solid #262626;
+    color: #ffffff;    
+    background-color: #2A2A2A;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 13px 19px;
+    margin: 0px 10px;
+    width: 120px;
+}
+
+.download_direct:hover{
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+#installation_and_uninstallation{
+    background: #f7f7f7;
+    padding-bottom: 70px;
+}
+
+#installation_and_uninstallation_table {
+    margin: 0 auto;
+    width: 90%;
+    border-spacing: 15px 0px;
+}
+
+#installation_and_uninstallation_table td {
+    text-align: left;
+    vertical-align: top;
+    width: 40%;
+}
+
+#mas_versions {
+    padding-bottom: 10px;
+}
+
+/******************************************** Support ********************************************/
+
+#support_container {
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#support_container p{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+/******************************************** Sprites ********************************************/
+
+.focus_icons {
+    fill: #2E73CB;
+    padding-top: 8px;
+}
+
+.features_icons {
+    fill: #2E73CB;
+    display: block;
+    float: left;
+    padding-top: 8px;
+    padding-right: 8px;    
+}
+
+/******************************************** Queries ********************************************/
+@media only screen and (max-width: 768px) {
+    header {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: auto;
+    }
+    #header_fix_space {
+        height: 0px;
+    }
+    .focus {
+        display: inline;
+    }
+    .features_row {
+        display: inline ;
+    }
+    .feature {
+        padding-bottom: 12px;
+    }
+    #versions_comparison_downloads_row_primary {
+        display: none;
+    }
+    #versions_comparison_downloads_row_secondary {
+        display: none;
+    }
+}
