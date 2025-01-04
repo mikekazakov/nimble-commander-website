@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Dual-pane Mac file manager with a classic design, built for power users. Includes file search, batch renaming, terminal emulator, ZIP, 7z, RAR, tar, gzip, FTP, SFTP, WebDAV, Dropbox, and more.">
+    <meta name="author" content="Michael Kazakov">
+    <title>What's new - Nimble Commander</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <a href="../">
+                    <h1>Nimble Commander</h1>
+                </a>
+            </div>
+            <nav id="header_links">
+                <ul>
+                    <li><a href="../download/">Download</a></li>
+                    <li><a href="../whats-new/">What's new</a></li>
+                    <li><a href="../support/">Support</a></li>
+                    <li><a href="https://github.com/mikekazakov/nimble-commander">Source</a></li>
+                    <li><a href="https://github.com/mikekazakov/nimble-commander/discussions">Discussions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="header_fix_space"></div>
+    <main>
+        <section>
+            <div class="container" id="whats_new">
+                <h2 class="section_header">History of changes</h2>
+
+                <h3>1.7.0 (18 Dec 2024):</h3>
+                <ul>
+                    <li>Updated for macOS Sequoia.</li>
+                    <li>The integrated viewer now provides syntax highlighting using the Lexilla library.</li>
+                    <li>The integrated viewer no longer uses toolbars; instead, a status bar is used to save space.</li>
+                    <li>The user guide has been significantly expanded.</li>
+                    <li>Updated the application icon.</li>
+                    <li>Added an option for natural collation when sorting filenames.</li>
+                    <li>Fixed a bug causing unstable ordering of tool icons on the toolbar.</li>
+                    <li>The "Go To" popup now allows numeric keys to filter items.</li>
+                    <li>Added a new hotkey: Ctrl+Return to display a context menu.</li>
+                    <li>Fixed an issue with incomplete FTP transfers.</li>
+                    <li>Fixed an issue where an overlapped terminal caused the mouse cursor to display the wrong type.</li>
+                    <li>Fixed a broken Shift+Tilde shortcut.</li>
+                    <li>Removed the built-in checksum calculation feature.</li>
+                    <li>Cmd+B now adds the current directory of a panel instead of the path to the currently focused item.</li>
+                    <li>Fixed an issue where excessive refresh requests during file operations caused incorrect behavior in file panels.</li>
+                    <li>Numerous small UI polish improvements have been made.</li>
+                </ul>
+
+                <h3>1.6.1 (23 Jul 2024):</h3>
+                <ul>
+                    <li>Improved the security checks in the privileged helper.</li>
+                </ul>
+
+                <h3>1.6.0 (14 May 2024):</h3>
+                <ul>
+                    <li>Nimble Commander is now completely free and open source.</li>
+                    <li>Added support for file tags.</li>
+                    <li>Fixed an issue that could stop directory updates on SMB volumes.</li>
+                    <li>Fixed an issue where the mouse cursor could navigate to the wrong directory.</li>
+                    <li>You can now extract files from archives by dragging them into the ".." directory.</li>
+                    <li>Fixed an issue where file permissions might not be restored correctly after extracting from an archive.</li>
+                    <li>Fixed a crash when accessing an FTP server.</li>
+                    <li>Fixed keyboard navigation issues with F1/F2 and Quick Lists pop-ups.</li>
+                    <li>Fixed a bug preventing correct duplication of a file that's being written to.</li>
+                </ul>
+
+                <h3>1.5.0 (18 Dec 2023):</h3>
+                <ul>
+                    <li>Updated for macOS Sonoma.</li>
+                    <li>Added support for italic text in the terminal emulator.</li>
+                    <li>Added support for the DECSCUSR command by the terminal emulator.</li>
+                    <li>Added full support for 8-bit colours and partial support for 24-bit colours in the terminal emulator.</li>
+                    <li>Added support for escaping of square brackets in batch renaming: [[ and ]].</li>
+                    <li>Added support for fuzzy matching in Quick Search.</li>
+                    <li>Improved the cancellation of panel refreshing.</li>
+                    <li>Improved the handling of RAR archives.</li>
+                    <li>Improved the support of complex Unicode symbols by the terminal emulator.</li>
+                    <li>Improved the arguments parsing for the external tools.</li>
+                    <li>Fixed the mapping of new the functional keys on M2 laptops.</li>
+                    <li>Fixed the incorrect behaviour of the hotkey input field.</li>
+                    <li>Fixed an issue that the overlapped terminal could sometimes stop syncing the current working directory.</li>
+                    <li>Fix a crash that could happen when dragging from a temporary panel.</li>
+                    <li>Many other fixes, improvements and optimizations.</li>            
+                </ul>
+
+                <h3>1.4.0 (25 Dec 2022):</h3>
+                <ul>
+                    <li>Updated for macOS Ventura.</li>
+                    <li>Now supports opening compressed non-archived files with these extensions: .bz2, .gz, .lz, .lz4, .lzma, .lzo, .xz, .z, .zst.</li>
+                    <li>Find Files and (De-)Select by Mask now both support masks based on regular expressions.</li>
+                    <li>Reformatted the UI of the Find Files dialog to make it more laconic.</li>
+                    <li>Themes are now following the current macOS appearance, automatically switching between the two selected themes whenever the system-wide appearance changes. That's configurable and can be disabled. By default, the built-in "Light" and "Dark" themes are selected.</li>
+                    <li>Added two new hotkeys: Shift+Cmd+Left/Right to focus the left/right panel.</li>
+                    <li>Now scrolling caused by keypresses is instantaneous by default for both Brief and List presentation modes. The "filePanel.presentation.smoothScrolling" config setting controls this behaviour.</li>
+                    <li>Batch Rename now picks a longest filename to select a range of characters from.</li>
+                    <li>Improved the robustness of in-place renaming, that fixes the situations when a filesystem change discarded the in-place editor.</li>
+                    <li>Improved the robustness of the filesystem notifications handling. Now NC tries to rely on system notifications whenever possible but also keeps a backup in case the events don't come.</li>
+                    <li>Now switching to a Single-Pane mode and then back to Dual-Pane mode preserves the proportion between the panels.</li>
+                    <li>Fixed an issue with moving items into the ".." directory.</li>
+                    <li>Fixed a performance degradation when calculating directories sizes in a massive listing.</li>
+                    <li>Fixed an issue with dragging a file into NC when a Full Disk Access was not granted, which could end up in an error.</li>
+                    <li>Fixed an issue with incorrect horizontal alignment of a scroller in the Brief presentation mode.</li>
+                    <li>Fixed the visual glitches in the Dark mode caused by transparency of the List view headers.</li>
+                    <li>Cmd-Backspace no longer moves an item to Trash when its being renamed via in-place filename editor.</li>
+                    <li>Fixed a visual glitch of wrongly truncated filenames being when they could fit entirely.</li>
+                    <li>Fixed an issue with WebDAV that the MOVE request wasn't conforming to the RFC and could fail on some servers.</li>
+                    <li>Fixed an issue that cloud-based file providers caused huge resources consumption when browsing these directories.</li>
+                    <li>Improved the consistency of the custom hotkeys handling. Now non-menu actions rely on hotkey characters instead of key codes as previously.</li>
+                    <li>Fixed an issue with the built-in terminal that is didn't support custom shells that are relative symlinks.</li>
+                    <li>Fixed a visual glitch when Brief Mode wasn’t displaying items until manually scrolled.</li>
+                    <li>Fixed a sporadic deadlock in the native VFS happened when setting up listeners to notifications of the filesystem events.</li>
+                    <li>Fixed a QuickLook crash when switching between some PDF files. </li>
+                    <li>Fixed a UI crash that could happen when filenames contain newline symbols.</li>
+                    <li>Many other fixes, improvements and optimizations.</li>
+                </ul>
+
+                <h3>1.3.0 (16 Oct 2021):</h3>
+                <ul>
+                    <li>List view now has the Extension and the Date Accessed columns.</li>
+                    <li>Items can now be sorted by Date Last Opened a.k.a. "atime".</li>
+                    <li>Built-in Viewer now does scrolling along a predominant axis only.</li>
+                    <li>Built-in Viewer can now update its content by Cmd+R or automatically on native filesystems.</li>
+                    <li>Brief System information now shows additional info in the CPU and the RAM boxes.</li>
+                    <li>Quick Search no longer handles the Space key by default.</li>
+                    <li>The Backspace key can now be assigned to any file panel shortcut.</li>
+                    <li>Batch Rename now supports the [P] and the [G] placeholders for parent and grandparent directory names.</li>
+                    <li>Batch Rename now supports text processing for the [A] placeholder.</li>
+                    <li>Now the toolbar tries to resolve full paths for short names of command-line tools to show their icons.</li>
+                    <li>Move to Trash can now work in Admin Mode.</li>
+                    <li>Added an option to choose which file operations should be enqueued and which should always start immediately.</li>
+                    <li>A generic error dialog shown by file operations can now implicitly mark the "Apply to All" checkbox if Shift is pressed.</li>
+                    <li>Locked items can now be unlocked by file operations.</li>
+                    <li>Stability of the WebDAV VFS was improved.</li>
+                    <li>Dropbox VFS now uses short-lived access tokens.</li>
+                    <li>Fixed a crash when an External Tool asks for a parameter value.</li>
+                    <li>Fixed a crash when in-place renaming was used in combination with Quick Search.</li>
+                    <li>Fixed an issue that Quick Search prompt was not updated when a panel was reloaded.</li>
+                    <li>Fixed an issue that in-place renaming could remove focus from a current panel.</li>
+                    <li>Fixed an issue with saving the configuration when the Users folder was placed on a non-root volume.</li>
+                    <li>Fixed an issue with the built-in terminal when a custom shell was a symbolic link.</li>
+                    <li>Fixed an issue with the inability of PSFS VFS to kill a process.</li>
+                    <li>Fixed an issue of silent failing to drag an item into an NC window when lacking permissions.</li>
+                    <li>Fixed a visual glitch with vertical separators when Classic theme was used.</li>
+                    <li>Fixed a visual glitch of blurred panels after switching between Retina and Non-Retina displays.</li>
+                    <li>Fixed a freeze in the Batch Rename dialog when renaming a large number of items.</li>
+                    <li>Many other improvements and optimizations.</li>                
+                </ul>
+
+                <h3>1.2.9 (31 Dec 2020):</h3>
+                <ul>
+                    <li>Now contains a universal binary for ARM64 and x86-64.</li>
+                    <li>Updated for macOS Big Sur.</li>
+                    <li>Terminal emulator was significantly improved.</li>
+                    <li>Panel items are now automatically deselected after a file operation.</li>
+                    <li>Added a new action “Follow Symlink”: Cmd+Right.</li>
+                    <li>Fixed defaults paths to system applications.</li>
+                    <li>Fixed support for large directories in Dropbox VFS.</li>
+                    <li>Now a Deletion operation can be stopped during a scanning phase.</li>
+                    <li>Now file time representations are updated when a system date changes.</li>
+                    <li>Preview request now automatically expands a collapsed panel.</li>
+                    <li>SFTP VFS now supports ED25519 keys.</li>
+                    <li>FTP VFS now supports Active Mode.</li>
+                    <li>Numerous other bug fixes and improvements.</li>
+                </ul>
+
+                <h3>1.2.8 (18 Apr 2020, MAS only):</h3>
+                <ul>
+                    <li>Fixed an issue of slow renaming.</li>
+                </ul>
+
+                <h3>1.2.7 (29 Jan 2020):</h3>
+                <ul>
+                    <li>Updated to support macOS Catalina.</li>
+                    <li>Bugfixes and internal improvements.</li>
+                </ul>
+
+                <h3>1.2.6 (24 Aug 2019):</h3>
+                <ul>
+                    <li>Internal Viewer got a new implementation which is more performant and stable.</li>
+                    <li>Compress operation now provides an option to protect a target archive with a password.</li>
+                    <li>Find Files sheet got an option to search for files which do not contain some text.</li>
+                    <li>New action “Copy Item Directory”: Shift+Alt+Cmd+C.</li>
+                    <li>QuickLook icons are now generated only for files with extensions conforming to a whitelist of UTIs.
+                        By
+                        default, this list includes “public.image”, “public.movie” and “public.audio”.</li>
+                    <li>Popup menus (F1/F2 and quick lists: Cmd+1..5) can now switch to other menus by hitting their
+                        hotkeys.
+                    </li>
+                    <li>Dragging items to the Trash now deletes them as expected.</li>
+                    <li>The in-place renaming editor now flickers less and is more responsive.</li>
+                    <li>Fixed an issue with incompatible SSH key types.</li>
+                    <li>Fixed the built-in terminal’s issue of invalid scroll position after switching to file panels and
+                        back.
+                    </li>
+                    <li>Fixed an issue with an invalid placing of the Sharing popup.</li>
+                    <li>Lots of other bugfixes and internal improvements.</li>
+                </ul>
+
+                <h3>1.2.5 (27 Nov 2018):</h3>
+                <ul>
+                    <li>Updated to support macOS Mojave.</li>
+                    <li>Copy/Move operation can now keep both items when a destination already exists.</li>
+                    <li>File panels can now restore their saved states synchronously to reduce flicker on window creation.
+                    </li>
+                    <li>Field rename editor now commits an edit when its window loses focus.</li>
+                    <li>New action: “Close Other Tabs” (Alt+Cmd+W).</li>
+                    <li>The “+” button on the tab bar now reacts on the right click the same way as on the long press.</li>
+                    <li>Improved unmounting of APFS volumes. Now NC will eject an underlying physical storage too.</li>
+                    <li>Lots of bugfixes and internal improvements.</li>
+                </ul>
+
+                <h3>1.2.4 (27 Feb 2018):</h3>
+                <ul>
+                    <li>Added an ability to restore recently closed tabs via Shift+Cmd+R hotkey, or via Go->Recently Closed
+                        menu
+                        or
+                        via Plus button on the tab bar.</li>
+                    <li>Temporary panels are now stored in navigation history.</li>
+                    <li>Fixed the issue with APFS performance when copying large files.</li>
+                    <li>Fixed the issue with directories overwriting by moving.</li>
+                    <li>SFTP now supports falling back to rm+mv when a remote server refuses to perform an overwriting
+                        rename
+                        command.</li>
+                    <li>Fixed an issue of reporting an invalid size in temporary panels under certain conditions.</li>
+                    <li>Quick Search now allows arrow navigation inside matching results when it shows all items.</li>
+                    <li>Esc button can now return a window from full screen mode.</li>
+                </ul>
+
+                <h3>1.2.3 (12 Dec 2017):</h3>
+                <ul>
+                    <li>Improved UI for hotkeys customization.</li>
+                    <li>Now supporting Preview as a floating window.</li>
+                    <li>Selected items now have a highlighted background.</li>
+                    <li>Added support for dragging panel tabs between left and right sides.</li>
+                    <li>Sync Panels action now supports cloning of a temporary panel.</li>
+                    <li>Improved navigation with Alt+Arrows/Shift+Alt+Arrows in controls with filenames.</li>
+                    <li>Now clicking on a selected tab of a non-active pane will activate it.</li>
+                    <li>Improved the performance of SFTP operations.</li>
+                    <li>Fixed the issue with symlinks handling during the Copy operation.</li>
+                    <li>Fixed the issue with hidden symlinks being shown on certain conditions.</li>
+                    <li>Fixed the issue with QuickLook failure when the Classic theme is selected.</li>
+                    <li>Fixed the issue with wrong timestamps after copying to an SMB mount.</li>
+                </ul>
+
+                <h3>1.2.2 (19 Sep 2017):</h3>
+                <ul>
+                    <li>Added a new VFS: WebDAV.</li>
+                    <li>Made some enhancements for APFS and macOS High Sierra compatibility.</li>
+                    <li>SFTP now supports changing of file attributes and creation of symbolic links.</li>
+                    <li>File operations UI has got a much clearer design.</li>
+                    <li>Added notifications support.</li>
+                    <li>Made many improvements in drag & drop functionality.</li>
+                    <li>“Copy As” file operation now focuses the resulting item.</li>
+                    <li>Progress indicator in Dock is now much easier to read.</li>
+                    <li>Show Hidden Files shortcut was changed to “Shift+Cmd+.”.</li>
+                    <li>Fixed the lack of undo/redo when doing an in-place item renaming.</li>
+                    <li>Fixed the issue with invalid item icons in virtual file systems.</li>
+                </ul>
+
+                <h3>1.2.1 (29 May 2017):</h3>
+                <ul>
+                    <li>Added a new VFS: Dropbox.</li>
+                    <li>Added support for mounting of network shares.</li>
+                    <li>Added the network connections management window.</li>
+                    <li>Added a customizable favorite locations list.</li>
+                    <li>“Favorites” pop-up now has a section with frequently visited locations.</li>
+                    <li>Navigation pop-ups now support a quick selection by keyboard typing.</li>
+                    <li>“Duplicate” command is now accessible via the main menu or via the Cmd+D hotkey.</li>
+                </ul>
+
+                <h3>1.2.0 (4 Mar 2017):</h3>
+                <ul>
+                    <li>General UI overhaul: File panels presentation was rewritten from scratch.</li>
+                    <li>File panels can now be scrolled without cursor movement.</li>
+                    <li>Added customizable file panel layouts.</li>
+                    <li>File columns can now have dynamic width.</li>
+                    <li>Added a new feature: Themes.</li>
+                    <li>Added Dark Mode support.</li>
+                    <li>Sort mode indicator in the top-left corner became a button with a pop-up options list.</li>
+                    <li>Added the file icon size option: 1x, 2x, or disabled.</li>
+                    <li>Thumbnail generation now respects HiDPI displays.</li>
+                    <li>When using Quick Search, the “Show only matching items” option is now selected by default.</li>
+                    <li>Quick Search now underscores query matches in file names.</li>
+                    <li>Improved saving and restoring of window states.</li>
+                    <li>Added cascading of new windows.</li>
+                    <li>All alert windows can now be controlled with arrow keys.</li>
+                    <li>Improved drag & drop functionality.</li>
+                    <li>Fixed the issue with Ctrl+Tab processing.</li>
+                    <li>Date Added column is now shown in Full view mode.</li>
+                    <li>Added new hotkeys to scroll the file panel without moving the cursor: Alt+Home, Alt+End, Alt+PageUp,
+                        Alt+PageDown.</li>
+                    <li>Shift+Cmd+C/Alt+Cmd+C now copies file names/paths of all selected items.</li>
+                    <li>When working with FTP, Cmd+R forces the VFS to reload a directory listing.</li>
+                    <li>Fixed stability issues with SFTP connections.</li>
+                    <li>Added support for .xz archives.</li>
+                    <li>Allowed opening of partially damaged archives.</li>
+                    <li>Added automatic encoding detection when working with archives.</li>
+                    <li>Volumes are now properly ejected after being unmounted.</li>
+                    <li>OS X 10.10 is no longer supported.</li>
+                </ul>
+
+                <h3>1.1.5 (30 Sep 2016):</h3>
+                <ul>
+                    <li>Now the Find Files dialog can peek into archives.</li>
+                    <li>Made various UI improvements to the Find Files dialog.</li>
+                    <li>Now Internal Viewer can be shown in a separate window.</li>
+                    <li>Added support for archive handling on any VFS (that is, in other archives, on network filesystems,
+                        etc.).
+                    </li>
+                    <li>Added a startup mode setting for external tools.</li>
+                    <li>Now the terminal shell can be customized. Three shells are supported: bash, zsh, and [t]csh.</li>
+                    <li>If the shell was terminated (via exit, ^D, etc.), NC can revive it.</li>
+                    <li>Assigned “Compress Here” to F9, and “Compress to Opposite Panel” to Shift+F9.</li>
+                    <li>Now the File Already Exists dialog treats a pressed Shift key as an automatic “Apply to All”.</li>
+                    <li>Now toolbars can be customized.</li>
+                    <li>Now consequent Ctrl+F6 hits switch the selection between the filename without the extension, the
+                        file
+                        extension, and the whole filename.</li>
+                    <li>Added a new customizable hotkey: “Invert current item selection”.</li>
+                    <li>Batch Rename: Now source items can be removed via the context menu or by using the backspace key.
+                    </li>
+                    <li>Made many other improvements concerning usability, performance, and stability.</li>
+                </ul>
+
+                <h3>1.1.4 (30 July 2016):</h3>
+                <ul>
+                    <li>MAS-only maintenance update.</li>
+                </ul>
+
+                <h3>1.1.3 (27 July 2016):</h3>
+                <ul>
+                    <li>Added External Tools integration support: Quickly open any application with a variety of parameters
+                        based on
+                        the current focus/selection/path, etc.</li>
+                    <li>Added a new option to overwrite older files during a copy or move operation.</li>
+                    <li>Now External Editors can be used with any virtual file system, and changed files will be uploaded
+                        back.
+                    </li>
+                    <li>Added the new ⇧⌘P shortcut to toggle single-pane or dual-pane mode.</li>
+                    <li>Now deleting a file with process information in PSFS (Processes List) will kill that process.</li>
+                    <li>Added access to F1 … F19 buttons regardless of system settings.</li>
+                    <li>Enabled scripting with AppleScript.</li>
+                    <li>Now in case of drag & drop within NC, it will check whether the source and target filesystems are
+                        the
+                        same.
+                        Based on that information, NC will choose between moving and copying. Of course, the keyboard
+                        modifiers
+                        (Ctrl for linking, Alt for copying, Cmd for moving) will be considered, too.</li>
+                    <li>Added new shortcuts: F9 to compress items in the target panel, and ⇧F9 to compress items in the
+                        current
+                        panel.</li>
+                    <li>Fixed the issue with unmountable volumes (for example, USB flash drives that were locked by the
+                        built-in
+                        terminal and could not be ejected).</li>
+                    <li>Built-in terminal will no longer produce error messages on USB sticks with FAT32.</li>
+                    <li>Made some improvements in the handling of symbolic links inside archives.</li>
+                    <li>Fixed some visual and stability bugs.</li>
+                </ul>
+
+                <h3>1.1.2 (7 June 2016):</h3>
+                <ul>
+                    <li>Changed the application’s title to Nimble Commander.</li>
+                    <li>Added basic support for editing remote files.</li>
+                    <li>Added support for lightweight search with Spotlight.</li>
+                    <li>Added the new ⌥⌘V shortcut to move item here.</li>
+                    <li>Added support for remapping the main navigation keys.</li>
+                    <li>Fixed the problem of connecting to SSH-less SFTP servers.</li>
+                    <li>Fixed the issue with changing the case when renaming folders.</li>
+                    <li>Made some improvements in the FindFiles panel’s UI.</li>
+                    <li>Made lots of other minor fixes and improvements.</li>
+                </ul>
+
+                <h3>1.1.1 (14 March 2016):</h3>
+                <ul>
+                    <li>Added a new editable JSON-based config.</li>
+                    <li>Added ability to save and restore file panels states.</li>
+                    <li>Now extension-based sorting follows the case-sensitivity option.</li>
+                    <li>Now file search shows the current search path.</li>
+                    <li>Added basic support for encrypted Zip archives.</li>
+                    <li>Added text selection in the terminal emulator by double- and triple-clicking.</li>
+                    <li>Added different filenames trimming options.</li>
+                    <li>Added the ^F6 shortcut to rename an item in place.</li>
+                    <li>Added the ⌥⌘↩ shortcut to open an item in opposite panel tab.</li>
+                    <li>Fixed many bugs and did many other improvements.</li>
+                </ul>
+
+                <h3>1.1.0 (2 December 2015):</h3>
+                <ul>
+                    <li>Added ability to display search results as a temporary file panel.</li>
+                    <li>Added ability to modify the extended attributes (xattr) with the ⌥⌘X hotkey, like usual files.</li>
+                    <li>Added copy verification with MD5 checksum checking.</li>
+                    <li>Added quick selection/deselection by extension: ⌥⌘- / ⌥⌘=.</li>
+                    <li>Added ability to work as NSFileViewer.</li>
+                    <li>Now Enter opens a file as an archive only if the file has an appropriate extension.</li>
+                    <li>Fixed many bugs and did many other improvements, including huge code refactoring.</li>
+                    <li>OS X 10.9 is no longer supported.</li>
+                </ul>
+
+                <h3>1.0.9 (31 August 2015):</h3>
+                <ul>
+                    <li>Added the “overlapped” built-in terminal mode.</li>
+                    <li>Added the blinking cursor in the terminal.</li>
+                    <li>Added automatic version update mechanism.</li>
+                    <li>Added navigation quick lists with ⌘1-⌘5.</li>
+                    <li>Added support for archiving folders with symlinks.</li>
+                    <li>Improved drag & drop.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>1.0.8 (25 June 2015):</h3>
+                <ul>
+                    <li>Added the Batch Rename feature.</li>
+                    <li>Added an option to hide a scrollbar in the terminal.</li>
+                    <li>Added the ~ shortcut to go to Home directory.</li>
+                    <li>Added the / shortcut to go to Root directory.</li>
+                    <li>Fixed window size changing after switching to terminal or viewer mode.</li>
+                    <li>Did optimizations and fixed minor bugs.</li>
+                </ul>
+
+                <h3>1.0.7 (28 April 2015):</h3>
+                <ul>
+                    <li>Updated the look in modern presentation mode.</li>
+                    <li>Now a network connection can have an arbitrary title.</li>
+                    <li>Now recent network connections are shown in the GoTo pop-up menu.</li>
+                    <li>Added ability to edit or remove network connections in the Connect To menu by pressing the ⇧ or ⌥
+                        key.
+                    </li>
+                    <li>Updated the Go To Folder sheet with autocomplete.</li>
+                    <li>Added empty file creation with the ⌥⌘N hotkey.</li>
+                    <li>OS X 10.8 is no longer supported.</li>
+                    <li>Fixed bugs and did other improvements.</li>
+                </ul>
+
+                <h3>1.0.6 (18 February 2015):</h3>
+                <ul>
+                    <li>Added support for Zip64 and WARC archives.</li>
+                    <li>Fixed connectivity issues when using the OS X built-in SFTP server.</li>
+                    <li>Fixed bugs and did minor improvements.</li>
+                </ul>
+
+                <h3>1.0.5 (23 January 2015):</h3>
+                <ul>
+                    <li>Added ability to save remote connections.</li>
+                    <li>Added Russian translation.</li>
+                    <li>Added checking of Trash availability in a volume.</li>
+                    <li>Now a single backspace is treated as Go to Enclosing Folder.</li>
+                    <li>Improved stability.</li>
+                    <li>OS X 10.7 is no longer supported.</li>
+                </ul>
+
+                <h3>1.0.4 (12 December 2014):</h3>
+                <ul>
+                    <li>Added the admin mode (requires OS X 10.10).</li>
+                    <li>Added support for key-based SFTP authentication.</li>
+                    <li>Added the “Invert selection” hotkey: ^⌘A.</li>
+                    <li>Added more tab selection hotkeys: ⇧⌘[ and ⇧⌘].</li>
+                    <li>Fixed bugs and did other improvements.</li>
+                </ul>
+
+                <h3>0.6.3 (21 November 2014):</h3>
+                <ul>
+                    <li>Added support for tabs.</li>
+                    <li>Added file size display options.</li>
+                    <li>Added support for symlinks in archives.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.6.2 (27 October 2014):</h3>
+                <ul>
+                    <li>Updated the application to be compatible with OS X Yosemite.</li>
+                    <li>Added file checksum calculation.</li>
+                    <li>Added history in the Find Files sheet.</li>
+                    <li>Improved drag & drop.</li>
+                    <li>Added the “New folder” hotkey: ⇧⌘N.</li>
+                    <li>Added the “New folder with items” hotkey: ^⌘N.</li>
+                    <li>Now the space key opens preview.</li>
+                    <li>Now the bundles preview works with archives/FTP/SFTP.</li>
+                    <li>Fixed bugs.</li>
+                </ul>
+
+                <h3>0.6.1 (6 September 2014):</h3>
+                <ul>
+                    <li>Added support for SFTP.</li>
+                    <li>Added simplified quick search and files selecting by mask.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.6.0 (7 August 2014):</h3>
+                <ul>
+                    <li>Added support for FTP.</li>
+                    <li>Added custom filenames coloring based on filters.</li>
+                </ul>
+
+                <h3>0.5.9 (10 July 2014):</h3>
+                <ul>
+                    <li>Improved Unicode support in classic panel presentation and terminal emulator.</li>
+                    <li>Added ability to load the file encoding setting from the com.apple.TextEncoding extended attribute.
+                    </li>
+                    <li>Added the option to show localized filenames.</li>
+                    <li>Added keyboard shortcut editing in the Preferences window.</li>
+                    <li>Changed panel sorting hotkeys to ^⌘1-^⌘5.</li>
+                    <li>Added the “Eject volume” hotkey: ⌘E.</li>
+                    <li>Now by default QuickSearch works without key modifiers.</li>
+                    <li>Fixed minor bugs.</li>
+                </ul>
+
+                <h3>0.5.8 (19 June 2014):</h3>
+                <ul>
+                    <li>Added in-place files renaming by mouse click.</li>
+                    <li>Added terminal settings customization.</li>
+                    <li>Added new hotkeys for panels proportion changing: ^← / ^→ and ^⌥← / ^⌥→.</li>
+                </ul>
+
+                <h3>0.5.7 (25 May 2014):</h3>
+                <ul>
+                    <li>Added icons and thumbnails caching for smooth navigation.</li>
+                    <li>Added virtual file system with processes list and corresponding information.</li>
+                    <li>Fixed drag & drop of multiple files in some applications.</li>
+                    <li>Added the “Open directory in opposite panel” hotkey: ⌥↩.</li>
+                    <li>Did many stability and performance improvements.</li>
+                </ul>
+
+                <h3>0.5.6 (22 April 2014):</h3>
+                <ul>
+                    <li>Added support for integration of external editors, both native apps and terminal ones.</li>
+                    <li>Added Volume Information bar which displays a free space.</li>
+                    <li>Added ability to cancel opening of a big file in the internal viewer.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.5.5 (28 March 2014):</h3>
+                <ul>
+                    <li>Improved RAR archives support.</li>
+                    <li>Added calculation of all subdirectories’ sizes with the ^⇧↩ hotkey.</li>
+                    <li>Now directory contents are re-sorted by size after subdirectory size calculation.</li>
+                    <li>Added a hotkey to invert selection of the current item and move to the next one: Insert (fn↩).</li>
+                    <li>Slightly changed the look of the toolbar.</li>
+                    <li>Added the ⌥⌘T hotkey to show/hide the toolbar.</li>
+                    <li>Now a progress bar is shown in the application’s dock icon during file operations.</li>
+                    <li>Now the attention dialog opens if a problem occurs when a file operation starts.</li>
+                    <li>Now the internal viewer can also be closed with the hotkey used for opening it: ⌥F3.</li>
+                    <li>Fixed invalid coloring in terminal sessions and occasional problems with some binaries.</li>
+                    <li>Fixed many bugs and did stability improvements.</li>
+                </ul>
+
+                <h3>0.5.4 (28 February 2014):</h3>
+                <ul>
+                    <li>Added file search with options for filename mask, size, and contained text.</li>
+                    <li>Now toolbars can be hidden.</li>
+                    <li>Added support for the editable menu’s keyboard shortcuts via ~/Library/Application
+                        Support/Files/shortcuts.plist configuration file with defaults stored in ShortcutsDefaults.plist.
+                    </li>
+                </ul>
+
+                <h3>0.5.3 (9 February 2014):</h3>
+                <ul>
+                    <li>Added drag & drop support.</li>
+                </ul>
+
+                <h3>0.5.2 (20 January 2014):</h3>
+                <ul>
+                    <li>Added quick search options for soft/hard filtering and modifier keys.</li>
+                    <li>Fixed bugs and did minor improvements.</li>
+                </ul>
+
+                <h3>0.5.1 (30 December 2013):</h3>
+                <ul>
+                    <li>Added the ⌘⌫ shortcut to quickly move files to Trash.</li>
+                    <li>Added the ⌥⇧↩ shortcut to calculate directories’ sizes.</li>
+                    <li>Added the ⌥⇧⌘I shortcut to show/hide invisible files.</li>
+                    <li>Now invisible files are grayed in modern presentation mode.</li>
+                    <li>Added the Go submenu offering a set of standard folders with shortcuts.</li>
+                    <li>Added the ⇧⌘G shortcut to invoke the Go To Folder sheet.</li>
+                    <li>Added history navigation with ⌘[ and ⌘].</li>
+                    <li>Now a file panel’s Go To menu is invoked with F1 / F2 instead of ⌥F1 / ⌥F2.</li>
+                    <li>Now the Go To menu shows the same items as in Finder’s Favorites.</li>
+                    <li>Now the Go To menu items have quick-access hotkeys: 1, 2, … ,9, 0, -, =.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.5.0 (17 December 2013):</h3>
+                <ul>
+                    <li>Added a built-in terminal emulator.</li>
+                </ul>
+
+                <h3>0.4.4 (14 November 2013):</h3>
+                <ul>
+                    <li>Added a context menu to file panel items.</li>
+                    <li>Did minor improvements.</li>
+                </ul>
+
+                <h3>0.4.3 (31 October 2013):</h3>
+                <ul>
+                    <li>Added compression support: ability to archive files to the Zip format.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.4.2 (19 October 2013):</h3>
+                <ul>
+                    <li>Added the “Share” button for quick sharing of files and folders.</li>
+                    <li>Now panels proportion can be changed by dragging the splitter.</li>
+                    <li>Now QuickLook is integrated into the main window.</li>
+                    <li>Added the “Brief System Overview” pane.</li>
+                </ul>
+
+                <h3>0.4.1 (3 October 2013):</h3>
+                <ul>
+                    <li>Added pasteboard support: using ⌘C/⌘C to copy/paste files across the system.</li>
+                    <li>Added a hotkey to copy the currently selected entry name/path.</li>
+                    <li>Added a hotkey to go to the upper directory.</li>
+                    <li>Added an option to include other windows’ paths into the GoTo menu.</li>
+                    <li>Added the internal viewer’s search options and recent searches history.</li>
+                    <li>Implemented smooth scrolling in the internal viewer.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.4.0 (19 September 2013):</h3>
+                <ul>
+                    <li>Added archive browsing support: opening, viewing (with the internal viewer or QuickLook), and
+                        copying
+                        files
+                        from archives like from regular folders.</li>
+                    <li>Added support for the following formats: zip, tar, bz2, gz, pax, cpio, lha, ar, cab, mtree, iso,
+                        rar.
+                    </li>
+                    <li>Now the application can open archives regardless of their extension, including docx, xlsx, etc.</li>
+                    <li>Did minor performance improvements.</li>
+                </ul>
+
+                <h3>0.3.2 (15 August 2013):</h3>
+                <ul>
+                    <li>Added a tooltip widget for fast file searching (when typing with the ⌥ button).</li>
+                    <li>Added ability to fine-tune file copying (advanced settings).</li>
+                    <li>Added an option for numeric file sorting.</li>
+                    <li>Now the GoTo buttons display icons for folders.</li>
+                    <li>Added support for file selection by mask/wildcard.</li>
+                    <li>Now the internal text/hex viewer can save selection in the file.</li>
+                    <li>Now the size of the “..” directory can be calculated with F3, like in other cases.</li>
+                    <li>Added a volume eject/unmount button in the main window.</li>
+                    <li>Added a new preferences window with many customization options.</li>
+                    <li>Improved stability and performance.</li>
+                </ul>
+
+                <h3>0.3.1 (6 July 2013):</h3>
+                <ul>
+                    <li>Added support for link handling: creating symlinks and hardlinks, editing existing symlinks.</li>
+                    <li>Did lots of internal viewer enhancements: history saving, per-word and per-line selection, right
+                        shift+click
+                        handling, selection in hexadecimal mode, and more.</li>
+                </ul>
+
+                <h3>0.3.0 (23 June 2013):</h3>
+                <ul>
+                    <li>Added a built-in file viewer with textual and hexadecimal data presentation, capable of handling
+                        even
+                        multi-gigabyte files.</li>
+                    <li>Fixed minor bugs and did minor improvements.</li>
+                </ul>
+
+                <h3>0.2.0 (24 May 2013):</h3>
+                <ul>
+                    <li>Added a new presentation mode.</li>
+                    <li>Added support for Mac OS X 10.7.</li>
+                    <li>Did lots of minor improvements.</li>
+                </ul>
+
+                <h3>0.1.0 (1 May 2013):</h3>
+                <ul>
+                    <li> Initial release.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2025 Michael Kazakov</p>
+        </div>
+    </footer>
+</body>
